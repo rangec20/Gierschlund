@@ -11,25 +11,22 @@ import BillComponent from "./BillComponent";
 import {supabase} from "../utils/supabase";
 
 
-// const [receipts, setReceipts] = useState<IReceipt[]>([]);
-//
-// useEffect( () => {
-//     setReceipts()
-//
-//   })
-//
-//
-// }, []);
+
 
 const PendingBillView = () => {
 
+    const [receipts, setReceipts] = useState<IReceipt[]>([]);
 
+    useEffect(() => {
+        setReceipts(require("../mockdata.json"))
+    }, []);
 
     return (
         <ScrollView>
-            {/*{receipts.map((receipt ) => {*/}
-            {/*    return <BillComponent bill={receipt}/>*/}
-            {/*})}*/}
+            {receipts.map((receipt ) => {
+                // console.log(receipt)
+                return <BillComponent receipt={receipt}/>
+            })}
         </ScrollView>
     );
 };

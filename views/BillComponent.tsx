@@ -25,7 +25,6 @@ const styles = StyleSheet.create({
     component:{
         margin: 20,
         padding: 20,
-        //backgroundColor: "#3A3B3C",
         backgroundColor: "#E4E6EB",
         borderColor: "#242526",
         borderWidth: 5,

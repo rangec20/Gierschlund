@@ -16,3 +16,14 @@ interface IReceipt{
     imageUrl: string
     household: IHousehold
 }
+
+// interface IReceipt{
+//     id: number,
+//     user: string,
+//     purposeOfTransfer: string,
+//     transactionPartner: string,
+//     price: number,
+//     dateOfTransfer: Date,
+//     pending: boolean,
+//     imageUrl: string
+// }
