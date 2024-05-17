@@ -5,13 +5,14 @@
  * Time: 09:14
  */
 
-interface IBill{
+interface IReceipt{
     id: number,
-    user: string,
+    creatorUser: IUser,
+    completedUser: IUser,
     purposeOfTransfer: string,
     transactionPartner: string,
     price: number,
     dateOfTransfer: Date,
-    pending: boolean,
     imageUrl: string
+    household: IHousehold
 }

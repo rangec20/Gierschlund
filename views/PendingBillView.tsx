@@ -8,20 +8,28 @@
 import React, {useEffect, useState} from 'react';
 import {ScrollView, Text, View} from "react-native";
 import BillComponent from "./BillComponent";
+import {supabase} from "../utils/supabase";
+
+
+// const [receipts, setReceipts] = useState<IReceipt[]>([]);
+//
+// useEffect( () => {
+//     setReceipts()
+//
+//   })
+//
+//
+// }, []);
 
 const PendingBillView = () => {
 
-    const [bills, setBills] = useState<IBill[]>([])
 
-    useEffect(() => {
-        setBills(require("../mockdata.json"))
-    }, []);
 
     return (
         <ScrollView>
-            {bills.map((bill ) => {
-                return <BillComponent bill={bill}/>
-            })}
+            {/*{receipts.map((receipt ) => {*/}
+            {/*    return <BillComponent bill={receipt}/>*/}
+            {/*})}*/}
         </ScrollView>
     );
 };

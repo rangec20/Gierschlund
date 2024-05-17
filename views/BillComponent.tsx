@@ -9,14 +9,14 @@ import React from 'react';
 import {StyleSheet, Text, View} from "react-native";
 
 interface BillComponentProps {
-    bill: IBill
+    receipt: IReceipt
 }
 
-const BillComponent: React.FC<BillComponentProps> = ({bill}) => {
+const BillComponent: React.FC<BillComponentProps> = ({receipt}) => {
     return (
         <View style={styles.component}>
-            <Text style={styles.text}>{bill.purposeOfTransfer} {bill.transactionPartner}</Text>
-            <Text style={styles.text}>{bill.price} {bill.user}</Text>
+            <Text style={styles.text}>{receipt.purposeOfTransfer} {receipt.transactionPartner}</Text>
+            <Text style={styles.text}>{receipt.price} {receipt.creatorUser.name}</Text>
         </View>
     );
 };
@@ -25,13 +25,15 @@ const styles = StyleSheet.create({
     component:{
         margin: 20,
         padding: 20,
-        backgroundColor: "grey",
-        borderColor: "tomato",
-        borderWidth: 10,
-        borderRadius: 200
+        //backgroundColor: "#3A3B3C",
+        backgroundColor: "#E4E6EB",
+        borderColor: "#242526",
+        borderWidth: 5,
+        borderRadius: 20
     },
     text:{
-        fontSize: 20
+        fontSize: 20,
+        //color: "#E4E6EB"
     }
 })
 export default BillComponent;
