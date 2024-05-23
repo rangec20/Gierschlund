@@ -27,18 +27,30 @@ const ReceiptComponent: React.FC<BillComponentProps> = ({bill, navigation}) => {
     );
 };
 
-
 const styles = StyleSheet.create({
-    component:{
-        margin: 20,
-        padding: 20,
-        backgroundColor: "grey",
-        borderColor: "black",
-        borderWidth: 10,
-        borderRadius: 200
+    component: {
+        margin: 16,
+        padding: 16,
+        backgroundColor: "#fff",
+        borderColor: "#ddd",
+        borderWidth: 1,
+        borderRadius: 8,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        elevation: 2,
+        alignItems: 'center', // Center content horizontally
     },
-    text:{
-        fontSize: 20
+    text: {
+        fontSize: 16,
+        color: "#333",
+        marginBottom: 4,
+        textAlign: 'center', // Center text horizontally
     }
-})
+});
+
 export default ReceiptComponent;
