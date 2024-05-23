@@ -1,13 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import {NavigationContainer} from "@react-navigation/native";
-import MyBottomTabBar from "./views/MyBottomTabBar";
+import {Image, StyleSheet, Text, View} from 'react-native';
+
+import React from "react";
+import Navigator from "./views/Navigator";
 
 export default function App() {
+
   return (
-    <NavigationContainer>
-      <MyBottomTabBar/>
-    </NavigationContainer>
+      <Navigator/>
   );
 }
 

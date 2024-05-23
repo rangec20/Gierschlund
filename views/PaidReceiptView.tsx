@@ -8,7 +8,7 @@
 import React from 'react';
 import {Text, View} from "react-native";
 
-const PaidBillView = () => {
+const PaidReceiptView = () => {
     return (
         <View>
             <Text>BEZAHLTE RECHNUNGEN</Text>
@@ -16,4 +16,4 @@ const PaidBillView = () => {
     );
 };
 
-export default PaidBillView;
+export default PaidReceiptView;
