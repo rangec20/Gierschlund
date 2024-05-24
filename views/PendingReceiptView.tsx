@@ -13,20 +13,20 @@ import navigator from "./Navigator";
 
 function PendingReceiptView () {
 
-    const [bills, setBills] = useState<IBill[]>([])
+    const [receipts, setReceipts] = useState<IReceipt[]>([])
     const navigation = useNavigation()
     useEffect(() => {
-        setBills(require("../mockdata.json"))
+        setReceipts(require("../mockdata.json"))
     }, []);
 
-    const addReceipt = (newReceipt:IBill) => {
-        setBills([... bills, newReceipt]);
+    const addReceipt = (newReceipt:IReceipt) => {
+        setReceipts([... receipts, newReceipt]);
     }
 
     return (
         <ScrollView>
-            {bills.map((bill ) => {
-                return <ReceiptComponent key={bill.id} bill={bill} navigation={navigation} />
+            {receipts.map((receipt ) => {
+                return <ReceiptComponent key={receipt.id} receipt={receipt} navigation={navigation} />
             })}
 
             <Button title={"Neue Rechnung Anlegen"} onPress={() => navigation.navigate("CreateReceipt")}/>

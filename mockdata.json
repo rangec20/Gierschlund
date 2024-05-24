@@ -1,7 +1,9 @@
 [
   {
     "id": 1,
-    "user": "georg123",
+    "creatorUser": {
+      "name": "georg123"
+    },
     "purposeOfTransfer": "Einkauf",
     "transactionPartner": "Interspar",
     "price": 25.93,
@@ -11,7 +13,9 @@
   },
   {
     "id": 2,
-    "user": "LeckerLuka",
+    "creatorUser": {
+      "name": "LeckerLuka"
+    },
     "purposeOfTransfer": "Mittagessen",
     "transactionPartner": "Dönerhaus II",
     "price": 5.50,

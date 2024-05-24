@@ -9,20 +9,20 @@ import React from 'react';
 import {Pressable, StyleSheet, Text, Touchable, TouchableHighlight, TouchableOpacity, View} from "react-native";
 
 interface BillComponentProps {
-    bill: IBill
+    receipt: IReceipt
     navigation: any
 }
 
-const ReceiptComponent: React.FC<BillComponentProps> = ({bill, navigation}) => {
+const ReceiptComponent: React.FC<BillComponentProps> = ({receipt, navigation}) => {
 
     const changeView = () => {
-        navigation.navigate("Details", bill)
+        navigation.navigate("Details", receipt)
     }
 
     return (
             <Pressable style={styles.component} onPress={() => changeView()}>
-                <Text style={styles.text}>{bill.purposeOfTransfer} {bill.transactionPartner}</Text>
-                <Text style={styles.text}>{bill.price} {bill.user}</Text>
+                <Text style={styles.text}>{receipt.purposeOfTransfer} {receipt.transactionPartner}</Text>
+                <Text style={styles.text}>{receipt.price} {receipt.creatorUser.name}</Text>
             </Pressable>
     );
 };

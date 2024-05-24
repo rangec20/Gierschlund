@@ -9,26 +9,26 @@ import React from 'react';
 import {Image, StyleSheet, Text, View} from "react-native";
 
 const ReceiptDetailView = ({route}) => {
-    const reciept:IBill = route.params;
+    const receipt:IReceipt = route.params;
     return (
         <View>
             <Text>Details</Text>
             <Text>Verwendungszweck</Text>
-            <Text>{reciept.purposeOfTransfer}</Text>
+            <Text>{receipt.purposeOfTransfer}</Text>
 
             <Text>Transaktionspartner</Text>
-            <Text>{reciept.transactionPartner}</Text>
+            <Text>{receipt.transactionPartner}</Text>
 
 
             <Text>Preis:</Text>
-            <Text>{reciept.price}</Text>
+            <Text>{receipt.price}</Text>
 
             <Text>Datum:</Text>
-            <Text>{reciept.dateOfTransfer}</Text>
+            <Text>{receipt.dateOfTransfer.toDateString()}</Text>
 
             <Text>Bild:</Text>
             <Image style={styles.image}
-                source={{uri: reciept.imageUrl}}></Image>
+                source={{uri: receipt.imageUrl}}></Image>
 
 
         </View>
