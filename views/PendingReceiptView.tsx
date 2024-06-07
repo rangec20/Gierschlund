@@ -23,13 +23,19 @@ function PendingReceiptView () {
         setBills([... bills, newReceipt]);
     }
 
+    const changeView = () => {
+
+        // @ts-ignore
+        navigation.navigate("CreateReceipt");
+    }
+
     return (
         <ScrollView>
             {bills.map((bill ) => {
                 return <ReceiptComponent key={bill.id} bill={bill} navigation={navigation} />
             })}
 
-            <Button title={"Neue Rechnung Anlegen"} onPress={() => navigation.navigate("CreateReceipt")}/>
+            <Button title={"Neue Rechnung Anlegen"} onPress={() => changeView()}/>
 
 
         </ScrollView>

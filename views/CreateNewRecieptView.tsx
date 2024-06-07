@@ -47,9 +47,7 @@ const CreateNewRecieptView = () => {
         <View>
             <Text>Details</Text>
             <Text>Verwendungszweck:</Text>
-            <TextInput
-                value={""}
-                onChangeText={text => setPurposeOfTransfer(text)}/>
+            <TextInput onChangeText={text => setPurposeOfTransfer(text)}/>
 
             <Text>Transaktionspartner:</Text>
             <TextInput onChangeText={text => setTransactionPartner(text)}/>

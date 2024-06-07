@@ -37,7 +37,7 @@ function Navigator() {
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name={"Home"} component={Hometabs}/>
-                <Stack.Screen name={"CreateNewReceipt"} component={CreateNewRecieptView}/>
+                <Stack.Screen name={"CreateReceipt"} component={CreateNewRecieptView}/>
                 <Stack.Screen name={"Details"} component={ReceiptDetailView}/>
             </Stack.Navigator>
         </NavigationContainer>
