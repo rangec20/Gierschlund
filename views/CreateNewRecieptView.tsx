@@ -17,7 +17,7 @@ const CreateNewRecieptView = () => {
     const [dateOfTransfer, setDateOfTransfer] = useState<Date>(new Date())
     // imageUrl
 
-    const [newReciept, setNewReciept] = useState<IBill>()
+    const [newReciept, setNewReciept] = useState<IReceipt>()
 
     const onChangePrice = (text:string) => {
         // Use a regular expression to allow only numbers

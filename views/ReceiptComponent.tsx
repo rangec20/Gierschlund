@@ -8,12 +8,12 @@
 import React from 'react';
 import {Pressable, StyleSheet, Text, Touchable, TouchableHighlight, TouchableOpacity, View} from "react-native";
 
-interface BillComponentProps {
+interface ReceiptComponentProps {
     receipt: IReceipt
     navigation: any
 }
 
-const ReceiptComponent: React.FC<BillComponentProps> = ({receipt, navigation}) => {
+const ReceiptComponent: React.FC<ReceiptComponentProps> = ({receipt, navigation}) => {
 
     const changeView = () => {
         navigation.navigate("Details", receipt)
