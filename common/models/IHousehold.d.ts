@@ -1,4 +1,4 @@
 interface IHousehold {
-    id:number,
+    householdId:number,
     name:string
 }

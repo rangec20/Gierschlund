@@ -8,11 +8,11 @@
 import React from 'react';
 import {Image, StyleSheet, Text, View} from "react-native";
 
+// @ts-ignore
 const ReceiptDetailView = ({route}) => {
     const receipt:IReceipt = route.params;
     return (
         <View>
-            <Text>Details</Text>
             <Text>Verwendungszweck</Text>
             <Text>{receipt.purposeOfTransfer}</Text>
 
@@ -24,7 +24,7 @@ const ReceiptDetailView = ({route}) => {
             <Text>{receipt.price}</Text>
 
             <Text>Datum:</Text>
-            <Text>{receipt.dateOfTransfer.toDateString()}</Text>
+            <Text>{receipt.dateOfTransfer}</Text>
 
             <Text>Bild:</Text>
             <Image style={styles.image}

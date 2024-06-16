@@ -1,26 +1,40 @@
 [
   {
-    "id": 1,
+    "purposeOfTransfer": "Grocery Shopping",
+    "transactionPartner": "Supermarket",
+    "price": 123.45,
+    "dateOfTransfer": "2024-06-12",
+    "imageUrl": "http://example.com/receipt.jpg",
     "creatorUser": {
-      "name": "georg123"
+      "appuserId": 1,
+      "username": "rangec20",
+      "email": "rangec20@htl-kaindorf.at",
+      "password": "AdminAdminAdmin"
     },
-    "purposeOfTransfer": "Einkauf",
-    "transactionPartner": "Interspar",
-    "price": 25.93,
-    "dateOfTransfer": "7.4.2024",
-    "pending": true,
-    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAdpN0Q1R7H39DY2dyzu3PqSeNdzWODVT41njubczb1Q&s"
+    "completedUser": null,
+    "household": {
+      "householdId": 1,
+      "name": "Adminhousehold"
+    },
+    "receiptId": 1
   },
   {
-    "id": 2,
+    "purposeOfTransfer": "Grocery Shopping",
+    "transactionPartner": "Supermarket",
+    "price": 123.45,
+    "dateOfTransfer": "2024-06-12",
+    "imageUrl": "http://example.com/receipt.jpg",
     "creatorUser": {
-      "name": "LeckerLuka"
+      "appuserId": 1,
+      "username": "rangec20",
+      "email": "rangec20@htl-kaindorf.at",
+      "password": "AdminAdminAdmin"
     },
-    "purposeOfTransfer": "Mittagessen",
-    "transactionPartner": "Dönerhaus II",
-    "price": 5.50,
-    "dateOfTransfer": "8.4.2024",
-    "pending": true,
-    "imageUrl": "https://images.bild.de/655db6b9283a0838456b2426/3afc26e145a51174addf6715dec275e8,e31b9924?w=992"
+    "completedUser": null,
+    "household": {
+      "householdId": 1,
+      "name": "Adminhousehold"
+    },
+    "receiptId": 2
   }
 ]

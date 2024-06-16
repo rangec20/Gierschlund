@@ -6,7 +6,7 @@
  */
 
 interface IReceipt{
-    id: number,
+    receiptId: number,
     creatorUser: IUser,
     completedUser: IUser,
     purposeOfTransfer: string,
