@@ -12,35 +12,82 @@ import {Image, StyleSheet, Text, View} from "react-native";
 const ReceiptDetailView = ({route}) => {
     const receipt:IReceipt = route.params;
     return (
-        <View>
-            <Text>Verwendungszweck</Text>
-            <Text>{receipt.purposeOfTransfer}</Text>
+        <View style={styles.container}>
+            <View style={styles.detailRow}>
+                <Text style={styles.label}>Verwendungszweck</Text>
+                <Text style={styles.value}>{receipt.purposeOfTransfer}</Text>
+            </View>
 
-            <Text>Transaktionspartner</Text>
-            <Text>{receipt.transactionPartner}</Text>
+            <View style={styles.detailRow}>
+                <Text style={styles.label}>Transaktionspartner</Text>
+                <Text style={styles.value}>{receipt.transactionPartner}</Text>
+            </View>
 
+            <View style={styles.detailRow}>
+                <Text style={styles.label}>Preis</Text>
+                <Text style={styles.value}>{receipt.price}</Text>
+            </View>
 
-            <Text>Preis:</Text>
-            <Text>{receipt.price}</Text>
+            <View style={styles.detailRow}>
+                <Text style={styles.label}>Datum</Text>
+                <Text style={styles.value}>{receipt.dateOfTransfer}</Text>
+            </View>
 
-            <Text>Datum:</Text>
-            <Text>{receipt.dateOfTransfer}</Text>
-
-            <Text>Bild:</Text>
-            <Image style={styles.image}
-                source={{uri: receipt.imageUrl}}></Image>
-
-
+            <View style={styles.imageContainer}>
+                <Text style={styles.label}>Bild</Text>
+                <Image style={styles.image} source={{ uri: receipt.imageUrl }} />
+            </View>
         </View>
     );
 };
 
-
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        padding: 16,
+        backgroundColor: '#f0f0f0',
+    },
+    detailRow: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        paddingVertical: 8,
+        paddingHorizontal: 16,
+        backgroundColor: '#ffffff',
+        borderRadius: 8,
+        marginBottom: 16,
+        shadowColor: '#000',
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        elevation: 2,
+    },
+    label: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: '#333333',
+    },
+    value: {
+        fontSize: 16,
+        color: '#666666',
+    },
+    imageContainer: {
+        marginTop: 16,
+        alignItems: 'center',
+        padding: 16,
+        backgroundColor: '#ffffff',
+        borderRadius: 8,
+        shadowColor: '#000',
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        elevation: 2,
+    },
     image: {
-        width: 500,
-        height: 500,
+        width: 200,
+        height: 200,
+        resizeMode: 'contain',
+        marginTop: 8,
     },
 });
+
 
 export default ReceiptDetailView;

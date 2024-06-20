@@ -40,10 +40,9 @@ const ReceiptComponent: React.FC<ReceiptComponentProps> = ({receipt, navigation}
         </Pressable>
     );
 };
-
 const styles = StyleSheet.create({
     component: {
-        backgroundColor: '#f8f8f8',
+        backgroundColor: '#ffffff',
         padding: 10,
         marginVertical: 10,
         marginHorizontal: 8,
@@ -65,11 +64,11 @@ const styles = StyleSheet.create({
     label: {
         fontWeight: 'bold',
         fontSize: 14,
-        color: '#555',
+        color: '#333333',
     },
     value: {
         fontSize: 14,
-        color: '#333',
+        color: '#666666',
     },
 });
 export default ReceiptComponent;
