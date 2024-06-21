@@ -12,18 +12,18 @@ import {useIsFocused, useNavigation} from "@react-navigation/native";
 import navigator from "./Navigator";
 import axios from "axios";
 
-function PendingReceiptView() {
+const PendingReceiptView = ({route}) => {
 
+    const {household} = route.params;
     const [receipts, setReceipts] = useState<IReceipt[]>([])
     const navigation = useNavigation()
-    const householdId = 1
 
     const isFocused = useIsFocused();
 
 
     useEffect(() => {
         if (Platform.OS == "web") {
-            axios.get(`http://localhost:8080/receipt/${householdId}?completed=false`)
+            axios.get(`http://localhost:8080/receipt/${household.householdId}?completed=false`)
                 .then(response => {
                     setReceipts(response.data as IReceipt[]);
                 })

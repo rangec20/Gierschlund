@@ -8,6 +8,7 @@ import CreateNewRecieptView from "./CreateNewRecieptView";
 import ReceiptDetailView from "./ReceiptDetailView";
 import LoginView from "./LoginView";
 import RegisterView from "./RegisterView";
+import HouseholdSelectionView from "./HouseholdSelectionView";
 import { Image } from "react-native";
 
 const Tab = createBottomTabNavigator();
@@ -33,6 +34,7 @@ function Navigator() {
             <Stack.Navigator initialRouteName="Login">
                 <Stack.Screen name={"Login"} component={LoginView} options={{ headerShown: false }} />
                 <Stack.Screen name={"Register"} component={RegisterView} options={{ headerShown: false }} />
+                <Stack.Screen name={"HouseholdSelection"} component={HouseholdSelectionView} />
                 <Stack.Screen name={"Home"} component={Hometabs} options={{ headerShown: false }} />
                 <Stack.Screen name={"CreateReceipt"} component={CreateNewRecieptView} />
                 <Stack.Screen name={"Details"} component={ReceiptDetailView} />
