@@ -28,7 +28,7 @@ function PendingReceiptView() {
                     setReceipts(response.data as IReceipt[]);
                 })
         } else if (Platform.OS == "android") {
-            axios.get(`http://10.0.2.2:8080/receipt/${householdId}?completed=false`)
+            axios.get(`http://10.0.2.2:8080/appuser?completed=false`)
                 .then(response => {
                     setReceipts(response.data as IReceipt[]);
                 })

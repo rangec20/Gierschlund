@@ -1,9 +1,8 @@
 
 import {Image, StyleSheet, Text, View} from 'react-native';
 
-import React from "react";
+import React, {useState} from "react";
 import Navigator from "./views/Navigator";
-
 
 export default function App() {
 
